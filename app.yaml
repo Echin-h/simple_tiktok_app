@@ -1,0 +1,15 @@
+app:
+  Port: 8080
+  Host: localhost
+  JwtSecret: "JwtSecret"
+  Release: false
+  RunMode: debug
+
+Mysql:
+  address: localhost:3307
+  user: user
+  password: password
+  dbName: tiktok
+  MaxIdle: 20
+  MaxOpen: 20
+  MaxLifetime: 100
