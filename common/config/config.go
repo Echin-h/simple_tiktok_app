@@ -14,22 +14,25 @@ var (
 var Path = "app.yaml"
 
 func Init() {
-	viper.SetConfigFile(Path)
-	viper.AddConfigPath(".")
+	v := viper.New()
 
-	err := viper.ReadInConfig()
+	v.SetConfigName("app")
+	v.SetConfigType("yaml")
+	v.AddConfigPath("../")
+	v.AddConfigPath(".")
+	err := v.ReadInConfig()
 	if err != nil {
 		log.Println("Read config error: ", err)
 		return
 	}
-	err1 := viper.Unmarshal(&c)
+	err1 := v.Unmarshal(&c)
 	if err1 != nil {
 		log.Println("Unmarshal config error: ", err)
 		return
 	}
-	viper.WatchConfig()
-	viper.OnConfigChange(func(e fsnotify.Event) {
-		err := viper.ReadInConfig()
+	v.WatchConfig()
+	v.OnConfigChange(func(e fsnotify.Event) {
+		err := v.ReadInConfig()
 		if err != nil {
 			log.Println("Config file update; change: ", e.Name)
 			return

@@ -5,11 +5,17 @@ app:
   Release: false
   RunMode: debug
 
-Mysql:
-  address: localhost:3307
-  user: user
-  password: password
-  dbName: tiktok
-  MaxIdle: 20
-  MaxOpen: 20
-  MaxLifetime: 100
+mysql:
+  address: 127.0.0.1:3307
+  user: user     # 你本地 mysql 的用户名
+  password: password # 你本地的 mysql 用户密码
+  dbName: tiktok # 这里是你在 mysql 建立的数据库名称
+  maxIdle: 20
+  maxOpen: 20
+  maxLifetime: 100
+redis:
+  host: 127.0.0.1:6379
+  password:
+  maxIdle: 20
+  maxActive: 20
+  idleTimeOut: 100

@@ -3,3 +3,36 @@
 2024-03-24 14:57:38	error	service/user.go:31	parse json error
 2024-03-24 15:02:33	error	service/user.go:31	parse json error
 2024-03-24 15:03:22	error	service/user.go:40	mysql happen error
+2024-03-25 19:07:47	error	service/user.go:43	parse json error
+2024-03-25 19:08:25	error	service/user.go:103	parse json error
+2024-03-25 19:14:19	error	service/user.go:103	parse json error
+2024-03-25 20:08:33	error	service/user.go:103	parse json error
+2024-03-26 14:15:07	error	service/user.go:43	parse json error
+2024-03-26 14:17:26	error	service/user.go:43	parse json error
+2024-03-26 14:18:08	error	service/user.go:43	parse json error
+2024-03-26 14:18:10	error	service/user.go:43	parse json error
+2024-03-26 14:18:25	error	service/user.go:43	parse json error
+2024-03-26 14:20:57	error	service/user.go:43	parse json error
+2024-03-26 14:28:36	error	service/user.go:43	parse json error
+2024-03-26 14:31:51	error	service/user.go:43	parse json error
+2024-03-26 14:32:16	error	service/user.go:43	parse json error
+2024-03-26 14:32:18	error	service/user.go:43	parse json error
+2024-03-26 14:37:32	error	service/user.go:44	parse json error
+2024-03-26 14:37:34	error	service/user.go:44	parse json error
+2024-03-26 14:37:35	error	service/user.go:44	parse json error
+2024-03-26 14:39:50	error	service/user.go:44	parse json error
+2024-03-26 14:44:09	error	service/user.go:44	parse json error
+2024-03-26 14:49:22	error	service/user.go:45	parse json error
+2024-03-26 15:48:26	error	middleware/auth.go:56	refresh token expire or parse token error
+2024-03-26 15:50:55	error	middleware/auth.go:56	refresh token expire or parse token error
+2024-03-26 15:52:05	error	service/user.go:104	parse json error
+2024-03-26 15:59:23	error	service/user.go:104	parse json error
+2024-03-26 16:00:46	error	service/user.go:105	parse json error
+2024-03-26 16:15:11	error	middleware/auth.go:119	login move forward error
+2024-03-26 16:16:15	error	middleware/auth.go:44	token不合法，请确认您是否登录
+2024-03-26 16:16:15	error	middleware/auth.go:119	login move forward error
+2024-03-26 19:52:20	error	middleware/auth.go:44	get id from token error	{"error": "token is expired by 3h37m30s"}
+2024-03-26 20:02:11	error	middleware/auth.go:44	get id from token error	{"error": "token contains an invalid number of segments"}
+2024-03-26 20:05:17	error	middleware/auth.go:44	get id from token error	{"error": "token contains an invalid number of segments"}
+2024-03-26 20:47:27	error	middleware/auth.go:53	token不合法，请确认您是否登录
+2024-03-26 21:19:29	error	service/user.go:104	password error

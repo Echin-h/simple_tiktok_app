@@ -5,6 +5,7 @@ import "time"
 type Config struct {
 	App   App
 	Mysql Mysql
+	Redis Redis
 }
 
 type App struct {
@@ -23,4 +24,10 @@ type Mysql struct {
 	MaxIdle     int
 	MaxOpen     int
 	MaxLifetime time.Duration
+}
+
+type Redis struct {
+	Address  string
+	Password string
+	Db       int
 }

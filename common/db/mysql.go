@@ -15,10 +15,6 @@ type Mysql struct {
 	*gorm.DB
 }
 
-type User struct {
-	model.User
-}
-
 var mysqlDB = &Mysql{}
 
 func MysqlInit() {
@@ -67,6 +63,10 @@ func (m *Mysql) AutoMigrateTable() error {
 
 func GetMysql() *Mysql {
 	return mysqlDB
+}
+
+type User struct {
+	model.User
 }
 
 func (u *User) BeforeCreate(tx *gorm.DB) error {

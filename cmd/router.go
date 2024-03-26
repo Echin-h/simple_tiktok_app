@@ -3,6 +3,7 @@ package cmd
 import (
 	"github.com/gin-gonic/gin"
 	ctrl "tiktok/controller"
+	"tiktok/middleware"
 )
 
 func Handler(r *gin.Engine) {
@@ -13,12 +14,14 @@ func Handler(r *gin.Engine) {
 		})
 	})
 
-	basic := r.Group("tiktok")
+	r.Use(middleware.Auth())
+
+	basic := r.Group("/tiktok")
 
 	// 用户
 	userGroup := basic.Group("/user")
 	{
 		userGroup.POST("/register", ctrl.Register)
-		userGroup.POST("login", ctrl.Login)
+		userGroup.POST("/login", ctrl.Login)
 	}
 }
