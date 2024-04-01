@@ -19,7 +19,3 @@ redis:
   maxIdle: 20
   maxActive: 20
   idleTimeOut: 100
-Aliyun:
-  endpoint: ""
-  accessKeyId: ""
-  accessKeySecret: ""
