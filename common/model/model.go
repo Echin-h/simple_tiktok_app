@@ -22,25 +22,32 @@ type User struct {
 }
 
 type Video struct {
-	Base                // 这里的ID可以表示某一条视频
-	Title    string     `gorm:"varchar(20)"`
-	Content  string     `gorm:"varchar(100)"`
-	UserId   int64      `gorm:"primaryKey"`
-	Comments []*Comment `gorm:"foreignKey:video_id"`
+	Base                     // 这里的ID可以表示某一条视频
+	Title         string     `gorm:"varchar(20)"`
+	Content       string     `gorm:"varchar(100)"`
+	UserId        int64      `gorm:"primaryKey"`
+	Comments      []*Comment `gorm:"foreignKey:video_id"`
+	PicUrl        string     `gorm:"comment:封面地址"`
+	PlayUrl       string     `gorm:"comment:播放地址"`
+	FavoriteCount int64
+	CommentCount  int64
 	// 具体的视频信息.......
 }
 
 type Comment struct {
-	Base
-	User     User `gorm:"foreignerKey:user_id"`
-	UserId   int64
-	Content  string `gorm:"varchar(30);not null"`
-	VideoId  int64
-	ParentId *int64     `gorm:"default:null;index"` // 评论底下还有评论
-	Children []*Comment `gorm:"-"`
+	ID        int64 `gorm:"primaryKey"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	DeletedAt gorm.DeletedAt `gorm:"index"`
+	User      User           `gorm:"foreignerKey:user_id"`
+	UserId    int64
+	Content   string `gorm:"varchar(100);not null"`
+	VideoId   int64
+	ParentId  int64      `gorm:"default:null;index"` // 评论底下还有评论
+	Children  []*Comment `gorm:"-"`
 }
 
-// 很巧妙，这个是逻辑上的多表】
+// 很巧妙，这个是逻辑上的多表
 type Follow struct {
 	Id           int64 `gorm:"primaryKey"`           // 关注的人的ID
 	User         User  `gorm:"foreignKey:follow_id"` // 关注人

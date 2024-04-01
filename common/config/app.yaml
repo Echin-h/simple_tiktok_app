@@ -1,3 +1,4 @@
+# this config file is used to test the function of the config.go
 app:
   Port: 8080
   Host: localhost
