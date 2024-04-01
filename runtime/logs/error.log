@@ -36,3 +36,52 @@
 2024-03-26 20:05:17	error	middleware/auth.go:44	get id from token error	{"error": "token contains an invalid number of segments"}
 2024-03-26 20:47:27	error	middleware/auth.go:53	token不合法，请确认您是否登录
 2024-03-26 21:19:29	error	service/user.go:104	password error
+2024-03-30 15:57:58	error	controller/publish.go:17	用户未登录
+2024-03-30 15:59:46	error	service/user.go:87	parse json error
+2024-03-30 16:00:46	error	service/user.go:87	parse json error
+2024-03-30 16:01:55	error	service/user.go:87	parse json error
+2024-03-30 16:02:01	error	service/user.go:87	parse json error
+2024-03-30 16:03:32	error	service/user.go:87	parse json error
+2024-03-30 16:04:06	error	service/user.go:89	parse json error
+2024-03-30 16:04:08	error	service/user.go:89	parse json error
+2024-03-30 16:04:20	error	service/user.go:89	parse json error
+2024-03-30 16:05:24	error	service/user.go:89	parse json error
+2024-03-30 16:05:38	error	controller/publish.go:17	用户未登录
+2024-03-30 16:06:27	error	controller/publish.go:17	用户未登录
+2024-03-30 16:15:57	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:18:38	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:25:10	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:25:11	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:28:23	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:29:36	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:31:41	error	controller/publish.go:17	用户未登录
+2024-03-30 16:33:05	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:38:34	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:41:55	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:43:44	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:44:23	error	controller/publish.go:21	文件上传失败
+2024-03-30 16:53:34	error	oss/oss.go:54	put object error
+2024-03-30 16:53:34	error	controller/publish.go:29	发布视频失败
+2024-03-30 17:13:37	error	oss/oss.go:54	put object error
+2024-03-30 17:13:37	error	controller/publish.go:29	发布视频失败
+2024-03-30 19:39:43	error	controller/publish.go:17	用户未登录
+2024-03-30 19:39:45	error	controller/publish.go:21	文件上传失败
+2024-03-30 19:40:19	error	controller/publish.go:17	用户未登录
+2024-03-30 19:40:19	error	controller/publish.go:21	文件上传失败
+2024-03-30 19:40:44	error	controller/publish.go:17	用户未登录
+2024-03-30 19:40:44	error	controller/publish.go:21	文件上传失败
+2024-03-30 19:41:21	error	controller/publish.go:21	文件上传失败
+2024-03-30 19:41:43	error	oss/oss.go:54	put object error
+2024-03-30 19:41:43	error	controller/publish.go:29	发布视频失败
+2024-03-30 19:54:15	error	oss/oss.go:54	put object error
+2024-03-30 19:54:15	error	controller/publish.go:29	发布视频失败
+2024-03-30 19:54:34	error	oss/oss.go:54	put object error
+2024-03-30 19:54:34	error	controller/publish.go:29	发布视频失败
+2024-03-30 19:58:16	error	oss/oss.go:54	put object error
+2024-03-30 19:58:16	error	controller/publish.go:29	发布视频失败
+2024-03-30 20:02:44	error	oss/oss.go:54	put object error
+2024-03-30 20:02:44	error	controller/publish.go:29	发布视频失败
+2024-03-30 20:02:49	error	oss/oss.go:54	put object error
+2024-03-30 20:02:49	error	controller/publish.go:29	发布视频失败
+2024-03-31 16:31:39	error	controller/comment.go:25	parse json error
+2024-03-31 16:34:07	error	controller/comment.go:25	parse json error

@@ -24,20 +24,22 @@ var (
 	SuccessStatus = newStatus(20000, "success")
 
 	// 400 BAD
-	ErrEmpty                = newStatus(40000, "username or password is empty")
-	QueryParamErrorStatus   = newStatus(40001, "请求的参数错误")
-	LoginErrorStatus        = newStatus(40002, "登录发生错误")
-	RegisterErrorStatus     = newStatus(40003, "注册发生错误")
-	UsernameExitErrorStatus = newStatus(40004, "用户名已存在")
-	TokenErrorStatus        = newStatus(40005, "token 错误")
-	InfoErrorStatus         = newStatus(40006, "无法获取该用户信息")
-	FileErrorStatus         = newStatus(40007, "文件上传失败")
-	PublishErrorStatus      = newStatus(40008, "发布时出现错误")
-	FeedErrorStatus         = newStatus(40009, "获取视频流出错")
-	EmptyErrorStatus        = newStatus(40010, "用户名或密码为空") // should be useless
-	FollowErrorStatus       = newStatus(40011, "关注失败")
-	FavoriteErrorStatus     = newStatus(40012, "点赞失败")
-	FollowListErrorStatus   = newStatus(40013, "获取关注列表时发生了错误")
+	ErrEmpty                  = newStatus(40000, "username or password is empty")
+	QueryParamErrorStatus     = newStatus(40001, "请求的参数错误")
+	LoginErrorStatus          = newStatus(40002, "登录发生错误")
+	RegisterErrorStatus       = newStatus(40003, "注册发生错误")
+	UsernameExitErrorStatus   = newStatus(40004, "用户名已存在")
+	TokenErrorStatus          = newStatus(40005, "token 错误")
+	InfoErrorStatus           = newStatus(40006, "无法获取该用户信息")
+	FileErrorStatus           = newStatus(40007, "文件上传失败")
+	PublishErrorStatus        = newStatus(40008, "发布时出现错误")
+	FeedErrorStatus           = newStatus(40009, "获取视频流出错")
+	EmptyErrorStatus          = newStatus(40010, "用户名或密码为空") // should be useless
+	FollowErrorStatus         = newStatus(40011, "关注失败")
+	FavoriteErrorStatus       = newStatus(40012, "点赞失败")
+	FollowListErrorStatus     = newStatus(40013, "获取关注列表时发生了错误")
+	PublishListErrorStatus    = newStatus(40014, "获取发布列表时发生了错误")
+	CommentPublishErrorStatus = newStatus(40015, "发布评论时发生了错误")
 
 	// 401 WITHOUT PERMISSION
 	NoLoginErrorStatus = newStatus(40101, "用户未登录")

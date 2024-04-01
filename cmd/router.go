@@ -21,7 +21,21 @@ func Handler(r *gin.Engine) {
 	// 用户
 	userGroup := basic.Group("/user")
 	{
-		userGroup.POST("/register", ctrl.Register)
-		userGroup.POST("/login", ctrl.Login)
+		userGroup.POST("/register/", ctrl.Register)
+		userGroup.POST("/login/", ctrl.Login)
+	}
+
+	// 视频
+	videoGroup := basic.Group("/video")
+	{
+		videoGroup.POST("/publish/", ctrl.PublishAction)
+		videoGroup.GET("/list/", ctrl.PublishList)
+	}
+
+	// 评论
+	commentGroup := basic.Group("/comment")
+	{
+		commentGroup.POST("/action/", ctrl.CommentAction)
+		// commentGroup.GET("/list/", ctrl.CommentList)
 	}
 }

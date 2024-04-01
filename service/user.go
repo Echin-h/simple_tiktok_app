@@ -27,8 +27,8 @@ type UserRegisterResp struct {
 }
 
 type UserLoginReq struct {
-	UserName string `json:"username" binding:"required,min=1,max=32"`
-	Password string `json:"password" binding:"required,min=6,max=32"`
+	UserName string `json:"username" `
+	Password string `json:"password" `
 }
 
 type UserLoginResp struct {
@@ -83,14 +83,16 @@ func (u User) Register(c *gin.Context) (interface{}, error) {
 
 func (u User) Login(c *gin.Context) (interface{}, error) {
 	var req UserLoginReq
-	if err := c.ShouldBindJSON(&req); err != nil {
+	// 这里不能写成 if c.ShouldBindJSON(&req);err != nil { 会报错
+	err := c.ShouldBindJSON(&req)
+	if err != nil {
 		log.Logger.Error("parse json error")
 		return nil, err
 	}
 
 	var user model.User
 	var cnt int64
-	err := db.GetMysql().Where("user_name = ?", req.UserName).First(&user).Count(&cnt).Error
+	err = db.GetMysql().Where("user_name = ?", req.UserName).First(&user).Count(&cnt).Error
 	if err != nil {
 		log.Logger.Error("mysql happen error")
 		return nil, res.ServerErrorStatus

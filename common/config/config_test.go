@@ -12,4 +12,5 @@ func TestInit(t *testing.T) {
 	fmt.Println("Mysql:", Get().Mysql.Password)
 	fmt.Println("Mysql:", Get().Mysql.DBName)
 	fmt.Println("App:", Get().App)
+	fmt.Println("Redis:", Get().Aliyun)
 }

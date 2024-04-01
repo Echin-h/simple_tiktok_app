@@ -3,9 +3,10 @@ package config
 import "time"
 
 type Config struct {
-	App   App
-	Mysql Mysql
-	Redis Redis
+	App    App
+	Mysql  Mysql
+	Redis  Redis
+	Aliyun Aliyun
 }
 
 type App struct {
@@ -30,4 +31,10 @@ type Redis struct {
 	Address  string
 	Password string
 	Db       int
+}
+
+type Aliyun struct {
+	Endpoint        string
+	AccessKeyID     string
+	AccessKeySecret string
 }

@@ -8,6 +8,7 @@ import (
 	"tiktok/common/config"
 	"tiktok/common/db"
 	"tiktok/common/log"
+	"tiktok/common/oss"
 )
 
 var once sync.Once
@@ -18,6 +19,7 @@ func init() {
 		log.Init()
 		config.Init()
 		db.Init()
+		oss.OssInit()
 	})
 }
 
