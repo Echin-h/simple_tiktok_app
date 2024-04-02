@@ -86,3 +86,35 @@ func Login(c *gin.Context) {
 	})
 	return
 }
+
+func Info(c *gin.Context) {
+	var u srv.User
+	var myUserID int64
+	var err error
+	targetUserID, _ := c.Get("user_id")
+	token := c.Query("token")
+
+	if token != "" {
+		if uid, exist := c.Get("userId"); uid == "" && !exist {
+			res.Resp(c, res.TokenErrorStatus, res.R{
+				"message": "token error",
+			})
+			return
+		} else {
+			myUserID = uid.(int64)
+		}
+	}
+
+	user, err := u.Info(myUserID, targetUserID.(int64))
+	if err != nil {
+		res.Resp(c, res.InfoErrorStatus, res.R{
+			"message": "info error",
+		})
+		return
+	}
+
+	res.Resp(c, res.SuccessStatus, res.R{
+		"user": user,
+	})
+	return
+}

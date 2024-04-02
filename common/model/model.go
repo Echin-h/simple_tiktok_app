@@ -14,11 +14,12 @@ type Base struct {
 
 type User struct {
 	Base
-	Name     string   `gorm:"not null;unique;index"`
-	UserName string   `gorm:"not null;unique;index"`
-	Password string   `gorm:"not null"`
-	Videos   []*Video `gorm:"foreignKey:user_id"`
-	// GPT说这些计数不应该在数据库层面存储，应该在应用层进行处理
+	Name          string   `gorm:"not null;unique;index"`
+	UserName      string   `gorm:"not null;unique;index"`
+	Password      string   `gorm:"not null"`
+	Videos        []*Video `gorm:"foreignKey:user_id"`
+	FollowCount   int64    `gorm:"default:0"`
+	FollowerCount int64    `gorm:"default:0"`
 }
 
 type Video struct {

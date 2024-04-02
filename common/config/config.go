@@ -11,7 +11,7 @@ var (
 	c = Config{}
 )
 
-var Path = "app.yaml"
+var Path = "test_app.yaml"
 
 func Init() {
 	v := viper.New()

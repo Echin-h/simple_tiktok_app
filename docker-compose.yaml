@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - HOST=localhost
+      - JwtSecret=JwtSecret
+      - Release=false
+      - RunMode=debug
+      - MYSQL_ADDRESS=127.0.0.1:3307
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DBNAME=tiktok
+      - MYSQL_MAXIDLE=20
+      - MYSQL_MAXOPEN=20
+      - MYSQL_MAXLIFETIME=100
+      - REDIS_HOST=127.0.0.1:6379
+      - REDIS_MAXIDLE=20
+      - REDIS_MAXACTIVE=20
+      - REDIS_IDLETIMEOUT=100
+      - ALIYUN_ENDPOINT=
+      - ALIYUN_ACCESSKEYID=
+      - ALIYUN_ACCESSKEYSECRET=
+    depends_on:
+      - mysql
+      - redis
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: tiktok
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3307:3306"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

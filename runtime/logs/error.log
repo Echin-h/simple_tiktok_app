@@ -85,3 +85,31 @@
 2024-03-30 20:02:49	error	controller/publish.go:29	发布视频失败
 2024-03-31 16:31:39	error	controller/comment.go:25	parse json error
 2024-03-31 16:34:07	error	controller/comment.go:25	parse json error
+2024-04-01 11:19:47	error	controller/comment.go:25	parse json error
+2024-04-01 11:19:56	error	controller/comment.go:25	parse json error
+2024-04-01 11:22:18	error	controller/comment.go:25	parse json error
+2024-04-01 11:36:05	error	controller/comment.go:47	create comment error
+2024-04-01 11:37:36	error	controller/comment.go:47	create comment error
+2024-04-01 12:00:26	error	controller/comment.go:25	parse json error
+2024-04-01 12:00:27	error	controller/comment.go:25	parse json error
+2024-04-01 12:12:19	error	controller/comment.go:26	parse json error
+2024-04-01 12:12:29	error	controller/comment.go:26	parse json error
+2024-04-01 12:12:39	error	controller/comment.go:26	parse json error
+2024-04-01 12:12:56	error	controller/comment.go:26	parse json error
+2024-04-01 12:19:05	error	controller/comment.go:64	parse json error
+2024-04-01 13:27:16	error	controller/comment.go:64	parse json error
+2024-04-01 20:29:34	error	controller/comment.go:63	delete comment error
+2024-04-02 16:54:38	error	service/user.go:56	mysql happen error
+2024-04-02 18:45:06	error	controller/publish.go:22	文件上传失败
+2024-04-02 18:50:16	error	controller/comment.go:84	parse json error
+2024-04-02 18:56:15	error	controller/comment.go:84	parse json error
+2024-04-02 18:58:07	error	controller/comment.go:84	parse json error
+2024-04-02 18:59:47	error	controller/comment.go:84	parse json error
+2024-04-02 19:03:16	error	controller/comment.go:84	parse json error
+2024-04-02 19:03:32	error	controller/comment.go:83	parse json error
+2024-04-02 19:04:56	error	controller/comment.go:83	parse json error
+2024-04-02 19:06:33	error	controller/comment.go:83	parse json error
+2024-04-02 19:07:42	error	controller/comment.go:83	parse json error
+2024-04-02 19:09:10	error	controller/comment.go:83	parse json error
+2024-04-02 19:12:07	error	controller/comment.go:83	parse json error
+2024-04-02 19:13:13	error	controller/comment.go:83	parse json error

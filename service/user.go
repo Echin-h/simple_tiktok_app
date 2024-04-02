@@ -136,3 +136,12 @@ func (u User) Login(c *gin.Context) (interface{}, error) {
 		RefreshToken: refreshToken,
 	}, nil
 }
+
+func (u User) Info(myUserID int64, targetUserID int64) (*model.User, error) {
+	var user model.User
+	if err := db.GetMysql().Where("id = ?", targetUserID).First(&user).Error; err != nil {
+		log.Logger.Error("get user info error")
+		return nil, err
+	}
+	return &user, nil
+}

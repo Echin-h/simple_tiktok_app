@@ -1,5 +1,6 @@
 package model
 
+// this is a demo, unused in the project
 import "time"
 
 type VideoDemo struct {

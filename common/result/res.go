@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// TODO: 写的时候可以多实现一些判断错误类型之类的，然后有不同返回
 type Status struct {
 	StatusCode int    `json:"status_code"`
 	Message    string `json:"message"`
@@ -40,6 +41,8 @@ var (
 	FollowListErrorStatus     = newStatus(40013, "获取关注列表时发生了错误")
 	PublishListErrorStatus    = newStatus(40014, "获取发布列表时发生了错误")
 	CommentPublishErrorStatus = newStatus(40015, "发布评论时发生了错误")
+	CommentDeleteErrorStatus  = newStatus(40016, "删除评论时发生了错误")
+	CommentListErrorStatus    = newStatus(40017, "获取评论列表时发生了错误")
 
 	// 401 WITHOUT PERMISSION
 	NoLoginErrorStatus = newStatus(40101, "用户未登录")

@@ -21,6 +21,6 @@ redis:
   maxActive: 20
   idleTimeOut: 100
 Aliyun:
-  endpoint: "oss-cn-hangzhou.aliyuncs.com"
-  accessKeyId: "LTAI5tGjPtmr3xyZpPduGKC2"
-  accessKeySecret: "qnhyxdXQSYELuW0XsA0rtGpaNNIV8x"
+  endpoint:
+  accessKeyId:
+  accessKeySecret:
